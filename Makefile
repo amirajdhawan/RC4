@@ -1,0 +1,19 @@
+main: main.o generateOutput.o keyScheduleAlgo.o swap.o
+	gcc -o main main.o generateOutput.o keyScheduleAlgo.o swap.o
+
+main.o: main.c
+	gcc -c main.c
+
+generateOutput.o: generateOutput.c generateOutput.h
+	gcc -c generateOutput.c
+
+keyScheduleAlgo.o: keyScheduleAlgo.c keyScheduleAlgo.h
+	gcc -c keyScheduleAlgo.c
+
+swap.o: swap.c swap.h
+	gcc -c swap.c
+
+clean:
+	rm -rf *.o main
+
+ 

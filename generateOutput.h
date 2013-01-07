@@ -1,0 +1,1 @@
+void generateOutput(char[] , int[]);
